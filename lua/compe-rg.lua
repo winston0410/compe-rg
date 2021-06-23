@@ -97,7 +97,7 @@ end
 
 local Source = {
 	has_executable = vim.fn.executable("rg") ~= 0,
-	rg = vim.tbl_extend("force", opts, require("compe.config").get().source.rg),
+	rg = vim.tbl_extend("force", opts, require("compe.config").get().source.rg or {}),
 }
 Source.__index = Source
 
